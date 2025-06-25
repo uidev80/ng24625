@@ -1,0 +1,7 @@
+<h3>parent-component works!</h3>
+
+<div>
+    <h2>Parent Counter (Shared State): {{ counter }}</h2>
+    <app-child-component [count]="counter" (increment)="handleIncrement()"
+        (decrement)="handleDecrement()"></app-child-component>
+</div>
