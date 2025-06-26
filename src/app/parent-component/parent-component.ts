@@ -11,9 +11,9 @@ import { ChildComponent } from '../child-component/child-component';
 
   template: `
     <div>
-      <h2>Parent Counter (Shared State): {{ counter }}</h2>
+      <h2>Parent Counter (Shared State): {{ parentCounter }}</h2>
       <app-child-component
-        [count]="counter"
+        [childCount]="parentCounter"
         (increment)="handleIncrement()"
         (decrement)="handleDecrement()"
       ></app-child-component>
@@ -21,13 +21,13 @@ import { ChildComponent } from '../child-component/child-component';
   `,
 })
 export class ParentComponent implements OnInit {
-  counter = 0;
+  parentCounter = 0;
 
   constructor(@Inject(CounterService) private counterService: CounterService) {}
 
   ngOnInit() {
     this.counterService.counter$.subscribe((value) => {
-      this.counter = value;
+      this.parentCounter = value;
     });
   }
 

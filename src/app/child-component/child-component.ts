@@ -16,15 +16,15 @@ import { Component, Input, Output, EventEmitter } from '@angular/core';
   // templateUrl: './child-component.html',
   styleUrls: ['./child-component.scss'],
   template: `
-    <div>
-      <h3>Child Counter: {{ count }}</h3>
+    <div class="child-comp">
+      <h2>Child Counter: {{ childCount }}</h2>
       <button (click)="onIncrement()">Increment</button>
       <button (click)="onDecrement()">Decrement</button>
     </div>
   `,
 })
 export class ChildComponent {
-  @Input() count: number = 0;
+  @Input() childCount: number = 0;
   @Output() increment = new EventEmitter<void>();
   @Output() decrement = new EventEmitter<void>();
 

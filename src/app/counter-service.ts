@@ -11,31 +11,31 @@ export class CounterService {
    * Internal BehaviorSubject holding the current counter value.
    * @private
    */
-  private counter = new BehaviorSubject<number>(0);
+  private serviceCounter = new BehaviorSubject<number>(0);
 
   /**
-   * Observable stream of the current counter value.
+   * Observable stream of the current serviceCounter value.
    */
-  counter$ = this.counter.asObservable();
+  counter$ = this.serviceCounter.asObservable();
 
   /**
-   * Increments the counter value by 1.
+   * Increments the serviceCounter value by 1.
    */
   increment() {
-    this.counter.next(this.counter.value + 1);
+    this.serviceCounter.next(this.serviceCounter.value + 1);
   }
 
   /**
-   * Decrements the counter value by 1.
+   * Decrements the serviceCounter value by 1.
    */
   decrement() {
-    this.counter.next(this.counter.value - 1);
+    this.serviceCounter.next(this.serviceCounter.value - 1);
   }
 
   /**
-   * Gets the current value of the counter.
+   * Gets the current value of the serviceCounter.
    */
   get value() {
-    return this.counter.value;
+    return this.serviceCounter.value;
   }
 }
