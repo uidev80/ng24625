@@ -1,25 +1,15 @@
-// import { Component } from '@angular/core';
-
-// @Component({
-//   selector: 'app-child-component',
-//   imports: [],
-//   templateUrl: './child-component.html',
-//   styleUrl: './child-component.scss',
-// })
-// export class ChildComponent {}
-
-// child.component.ts
 import { Component, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-child-component',
   // templateUrl: './child-component.html',
-  styleUrls: ['./child-component.scss'],
   template: `
     <div class="child-comp">
       <h2>Child Counter: {{ childCount }}</h2>
-      <button (click)="onIncrement()">Increment</button>
-      <button (click)="onDecrement()">Decrement</button>
+      <button class="mx-3 btn btn-primary" (click)="onIncrement()">
+        Increment
+      </button>
+      <button class="btn btn-success" (click)="onDecrement()">Decrement</button>
     </div>
   `,
 })

@@ -5,8 +5,6 @@ import { ChildComponent } from '../child-component/child-component';
 @Component({
   selector: 'app-parent-component',
   imports: [ChildComponent],
-  // templateUrl: './parent-component.html',
-  styleUrls: ['./parent-component.scss'],
   // providers: [CounterService],
 
   template: `

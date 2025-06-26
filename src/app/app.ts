@@ -6,7 +6,7 @@ import { ParentComponent } from './parent-component/parent-component';
   selector: 'app-root',
   imports: [RouterOutlet, ParentComponent],
   templateUrl: './app.html',
-  styleUrl: './app.scss',
+  // styleUrl: './app.scss',
 })
 export class App {
   protected title = 'Ang_20';
